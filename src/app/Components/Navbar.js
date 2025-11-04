@@ -20,8 +20,8 @@ const links = [
     <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Berkshire
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-amber-700 dark:text-white">
+            Berkshire <sub className='text-sm'>pms</sub>
           </span>
         </Link>
 
