@@ -22,7 +22,7 @@ export default function Jumbo() {
       {/* Content */}
       <motion.div
         className="relative z-10 flex flex-col items-start justify-center h-full px-4 text-left max-w-5xl mx-auto"
-        initial={{ y: -100, opacity: 0 }} // start above viewport
+        initial={{ y: -100, opacity: 0 }} 
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
       >
@@ -33,21 +33,21 @@ export default function Jumbo() {
 
        
         <h1 className="mt-6 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          <span className="text-black bg-clip-text ">
+          <span className="text-green-400 bg-clip-text ">
             Innovative Project
           </span>{" "}
           Management Solutions
         </h1>
 
-        {/* Description */}
+        
         <p className="mt-4 text-lg font-bold text-white lg:text-2xl sm:mt-6 sm:px-0">
           We are a Leading Project Management Company specializing in diverse sectors from Real Estate to finance and more. We drive innovation and growth through strategic product development and management.
         </p>
 
-        {/* Call-to-action */}
+       
         <Link
           href="#key-services"
-          className="relative mt-8 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white rounded-lg bg-orange-400 hover:bg-orange-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+          className="relative mt-8 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white rounded-lg bg-green-400  hover:bg-green-600  focus:ring-4 focus:ring-green-100 dark:focus:ring-green-900"
         >
           Explore Our Services
           <svg
