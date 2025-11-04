@@ -33,7 +33,7 @@ export default function Jumbo() {
 
        
         <h1 className="mt-6 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gr-400 to-orange-600">
+          <span className="text-black bg-clip-text ">
             Innovative Project
           </span>{" "}
           Management Solutions
