@@ -10,7 +10,7 @@ export default function Jumbo() {
       {/* Background Image */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/building.jpg')" }}
+        style={{ backgroundImage: "url('/estate-dubai.jpg')" }}
         initial={{ y: 200, opacity: 0 }} // start below viewport
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -26,14 +26,14 @@ export default function Jumbo() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
       >
-        {/* Small subtitle */}
+       
         <p className="text-sm font-normal tracking-widest text-gray-300 uppercase">
           Empowering Businesses Across Industries
         </p>
 
        
         <h1 className="mt-6 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-          <span className="text-green-400 bg-clip-text ">
+          <span className="text-orange-400 bg-clip-text ">
             Innovative Project
           </span>{" "}
           Management Solutions
@@ -47,7 +47,7 @@ export default function Jumbo() {
        
         <Link
           href="#key-services"
-          className="relative mt-8 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white rounded-lg bg-green-400  hover:bg-green-600  focus:ring-4 focus:ring-green-100 dark:focus:ring-green-900"
+          className="relative mt-8 inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white rounded-lg bg-orange-400  hover:bg-orange-600  focus:ring-4 focus:ring-orange-100 dark:focus:ring-orange-900"
         >
           Explore Our Services
           <svg
@@ -69,7 +69,7 @@ export default function Jumbo() {
 
         {/* Stats / small info */}
         <div className="inline-flex items-center pt-6 mt-8 border-t border-gray-700">
-          <svg
+          {/* <svg
             className="w-6 h-6"
             viewBox="0 0 24 24"
             fill="none"
@@ -82,7 +82,7 @@ export default function Jumbo() {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
           {/* <span className="ml-2 text-base font-normal text-white">
             42 projects delivered last month
           </span> */}
