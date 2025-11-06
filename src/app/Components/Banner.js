@@ -3,6 +3,8 @@
 import React from "react";
 import { Space_Grotesk } from "next/font/google";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { projectPhases } from "../constants/index";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -11,45 +13,92 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function Banner() {
   return (
-    <div className="hero my-15 text-center bg-base-200">
-      <div className="hero-content text-center max-w-5xl mx-auto px-4">
-        
-        <motion.h1
-          className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-bold my-5`}
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.header
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="text-center mb-10"
         >
-          Why Choose Us
-        </motion.h1>
+          <h2
+            className={`${spaceGrotesk.className} text-4xl sm:text-5xl font-extrabold tracking-tight`}
+          >
+            Our Core Project Expertise
+          </h2>
+          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+            We deliver disciplined project leadership across construction, technology,
+            marketing and social impact initiatives — ensuring accountability, compliance,
+            and measurable results.
+          </p>
+        </motion.header>
 
-    
-        <motion.p
-          className={`mb-2 text-xl sm:text-2xl lg:text-3xl tracking-tight text-gray-900 dark:text-gray-700`}
-          initial={{ y: 80, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projectPhases.map((phase, idx) => (
+            <motion.article
+              key={phase.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.12 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <div className="text-3xl">{phase.icon}</div>
+                <h3 className="text-lg font-semibold">{phase.title}</h3>
+              </div>
+
+              <div className="text-sm text-gray-700 mb-3">
+                {Array.isArray(phase.description) ? (
+                  <ul className="list-disc list-inside space-y-1">
+                    {phase.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{phase.description ?? ""}</p>
+                )}
+              </div>
+
+              <p className="text-sm text-gray-500 italic mb-4">{phase.example}</p>
+
+              <div className="mt-auto">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
+                >
+                  Learn more about {phase.title.split(" ")[0]}
+                  <svg
+                    className="ml-2 h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </Link>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
           viewport={{ once: true }}
+          className="text-center mt-10"
         >
-          <span className="block mb-3">
-            Our team possesses deep knowledge and experience across a wide range of industries,
-            allowing us to understand the unique challenges each sector faces.
-          </span>
-          <span className="block mb-3">
-            We leverage this expertise to deliver tailored solutions that drive growth, efficiency,
-            and innovation for our clients.
-          </span>
-          <span className="block mb-3">
-            By combining industry insight with practical strategies, we ensure measurable results
-            and lasting impact that align with our clients’ long-term vision.
-          </span>
-          <span className="block">
-            With a commitment to excellence and collaboration, we transform challenges into
-            opportunities for success across every industry we serve.
-          </span>
-        </motion.p>
+          <Link
+            href="/services"
+            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition"
+          >
+            See More Services
+          </Link>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

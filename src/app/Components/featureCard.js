@@ -41,7 +41,7 @@ export default function Jumbo() {
 
         
         <p className="mt-4 text-lg font-bold text-white lg:text-2xl sm:mt-6 sm:px-0">
-          We are a Leading Project Management Company specializing in diverse sectors from Real Estate to finance and more. We drive innovation and growth through strategic product development and management.
+          We are a Leading Project Management Company specializing in diverse sectors from Real Estate to finance and more. We drive innovation and growth through strategic project development and management.
         </p>
 
        

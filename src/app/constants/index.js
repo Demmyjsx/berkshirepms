@@ -169,8 +169,60 @@ const faqItems = [
     a: "Absolutely. We assess current performance, analyze customer data, and develop strategies to optimize existing products for better results and market competitiveness.",
   },
 ];
-
-
+export const projectPhases = [
+  {
+    id: 1,
+    icon: "🏗️",
+    title: "Construction Project Management",
+    description: [
+      "End-to-end planning, budgeting and scheduling for building projects",
+      "Contractor and vendor coordination, procurement and quality assurance",
+      "Permit management, site supervision and HSE compliance",
+      "Risk management and milestone tracking to ensure timely handover",
+    ],
+    example:
+      "Managing residential, commercial or infrastructure builds — ensuring budget discipline, contractor performance, and on-time delivery.",
+  },
+  {
+    id: 2,
+    icon: "💻",
+    title: "IT & Software Project Management",
+    description: [
+      "Product roadmaps, sprint planning and Agile delivery oversight",
+      "Stakeholder requirements, technical scope definition and QA",
+      "System integrations, cloud migration and security compliance",
+      "Release planning, user onboarding and performance monitoring",
+    ],
+    example:
+      "Coordinating cross-functional teams to deliver web and mobile products that meet business objectives and user needs.",
+  },
+  {
+    id: 3,
+    icon: "🎯",
+    title: "Event & Marketing Project Management",
+    description: [
+      "Campaign strategy, creative coordination and channel planning",
+      "Logistics, vendor sourcing and on-site event execution",
+      "Budget management and ROI tracking across channels",
+      "Stakeholder communications and post-event performance analysis",
+    ],
+    example:
+      "Delivering high-impact product launches, conferences and brand experiences with tight logistics and measurable outcomes.",
+  },
+  {
+    id: 4,
+    icon: "🌍",
+    title: "N.G.O Project Management",
+    description: [
+      "Donor reporting, compliance and transparent fund management",
+      "Program design, beneficiary engagement and needs assessment",
+      "Monitoring & evaluation (M&E) and impact measurement",
+      "Capacity building, local partner coordination and sustainability planning",
+    ],
+    example:
+      "Managing community development, health or education programs to ensure effective use of funds and measurable social impact.",
+  },
+];
 
 export {
  serviceSteps, servicesList, faqItems
