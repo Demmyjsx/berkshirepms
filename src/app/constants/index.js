@@ -1,229 +1,197 @@
-import { FaLightbulb, FaPencilRuler, FaRocket, FaChartLine } from 'react-icons/fa';
+import {  FaPencilRuler, FaRocket, FaChartLine } from 'react-icons/fa';
+import Image from 'next/image';
+
+// -------------------------------
+// PROJECT MANAGEMENT PHASES
+// -------------------------------
+
 
 const serviceSteps = [
   {
     id: 1,
-    name: 'Ideation & Strategy',
-    description: 'Identify user needs, market opportunities, and define product vision and goals.',
-    icon: <FaLightbulb size={150} className="text-orange-400" />,
+    name: "Initiation & Strategy",
+    description:
+      "Define project objectives, scope, and success criteria while identifying key stakeholders and resources.",
+    image: "/innovation-strategy.jpg",
   },
   {
     id: 2,
-    name: 'Planning & Design',
-    description: 'Prioritize features, create a roadmap, and design prototypes for development.',
-    icon: <FaPencilRuler size={150} className="text-blue-400" />,
+    name: "Planning & Design",
+    description:
+      "Develop a detailed project plan including timelines, resource allocation, risk assessment, and design documentation.",
+    image: "/planning.jpg",
   },
   {
     id: 3,
-    name: 'Development & Launch',
-    description: 'Build, test, validate, and release the product (or MVP) to the market.',
-    icon: <FaRocket size={150} className="text-green-400" />,
+    name: "Execution & Delivery",
+    description:
+      "Coordinate teams, manage progress, ensure quality standards, and deliver the project within budget and schedule.",
+    image: "/delivery.webp",
   },
   {
     id: 4,
-    name: 'Monitoring & Improvement',
-    description: 'Track performance, gather feedback, and continuously improve the product.',
-    icon: <FaChartLine size={150} className="text-purple-400" />,
+    name: "Monitoring & Closure",
+    description:
+      "Track performance, manage changes, evaluate outcomes, and ensure successful handover with full documentation.",
+    image: "/monitoring.jpg",
   },
 ];
 
-const servicesList = [
-  {
-    id: 1,
-    title: 'Real Estate',
-    products: 'Property listings websites, real estate apps, property management tools.',
-    services: [
-      'Building or managing real estate platforms (Zillow-type apps)',
-      'Managing digital listings & customer experience',
-      'Overseeing PropTech development',
-      'Market analysis & user feedback collection',
-    ],
-    example: 'Product Manager for a real estate CRM or rental management app.',
-  },
-  {
-    id: 2,
-    title: 'Fintech / Banking',
-    products: 'Banking apps, loan platforms, mobile wallets, investment tools.',
-    services: [
-      'Product roadmap planning',
-      'Feature prioritization (e.g., bill payments or crypto wallet)',
-      'UX research to improve onboarding',
-      'Compliance and security oversight',
-    ],
-    example: 'Managing a digital banking product like a savings app or card platform.',
-  },
-  {
-    id: 3,
-    title: 'E-commerce / Retail',
-    products: 'Shopping apps, online marketplaces, POS systems.',
-    services: [
-      'Optimize product listings, search, and checkout flow',
-      'Data-driven pricing & recommendation systems',
-      'Managing delivery and returns integrations',
-      'Partner/vendor product onboarding',
-    ],
-    example: 'Product management for an online store like Jumia or Amazon.',
-  },
-  {
-    id: 4,
-    title: 'Healthcare / MedTech',
-    products: 'Patient apps, telemedicine systems, hospital management software.',
-    services: [
-      'Coordinate with medical experts for compliant features',
-      'Manage appointment, records, and payment features',
-      'Ensure HIPAA (or equivalent) compliance',
-    ],
-    example: 'Managing a telehealth product or health tracking app.',
-  },
-  {
-    id: 5,
-    title: 'EdTech',
-    products: 'Online learning platforms, tutoring apps, LMS.',
-    services: [
-      'Design student–teacher interaction flows',
-      'Manage content uploads, tests, progress tracking',
-      'Integrate payments or certification systems',
-    ],
-    example: 'Product manager for an e-learning platform like Udemy.',
-  },
-  {
-    id: 6,
-    title: 'Transportation & Logistics',
-    products: 'Delivery tracking systems, ride-hailing apps, fleet management tools.',
-    services: [
-      'Route optimization product features',
-      'Manage driver and user app interfaces',
-      'Analytics on delivery performance',
-    ],
-    example: 'Product manager for a logistics tracking dashboard or dispatch app.',
-  },
-  {
-    id: 7,
-    title: 'Hospitality / Travel',
-    products: 'Hotel booking sites, travel planning apps, property rental systems.',
-    services: [
-      'Feature design for reservations, reviews, and payment',
-      'Partner integrations (airlines, hotels)',
-      'Customer experience optimization',
-    ],
-    example: 'Managing a short-stay booking app or hotel management system.',
-  },
-  {
-    id: 8,
-    title: 'SaaS / Tech Products',
-    products: 'Subscription software (e.g., CRM tools, analytics dashboards).',
-    services: [
-      'End-to-end product strategy',
-      'Feature design and backlog management',
-      'Growth & retention analysis',
-    ],
-    example: 'Managing a B2B SaaS dashboard or API-based product.',
-  },
-  {
-    id: 9,
-    title: 'Entertainment / Media',
-    products: 'Streaming platforms, music apps, content creation tools.',
-    services: [
-      'Feature roadmap (playlists, recommendations)',
-      'Data tracking for engagement',
-      'Subscription management & monetization',
-    ],
-    example: 'Product manager for a podcast or movie streaming app.',
-  },
-  {
-    id: 10,
-    title: 'Agriculture / AgriTech',
-    products: 'Farm management systems, produce marketplaces, weather apps.',
-    services: [
-      'Manage data dashboards for farmers',
-      'Integrate satellite/weather data',
-      'Connect farmers with buyers digitally',
-    ],
-    example: 'Product management for an app that helps farmers sell crops online.',
-  },
-];
 
 const faqItems = [
   {
-    q: "What does a product management service actually do?",
-    a: "Product management services help businesses plan, develop, and launch products effectively. This includes market research, defining requirements, coordinating between teams, and ensuring the product meets customer and business goals.",
+    q: "What does a project management service actually do?",
+    a: "Project management services help organizations plan, execute, and deliver projects effectively. This includes defining goals, managing resources, mitigating risks, and ensuring the project is completed on time, within scope, and on budget.",
   },
   {
-    q: "How does product management differ from project management?",
-    a: "Product management focuses on the strategy, vision, and lifecycle of a product, while project management handles the execution and delivery of specific projects that support that strategy.",
+    q: "How does project management differ from product management?",
+    a: "Project management focuses on executing specific goals within defined timelines and resources, while product management is about guiding the long-term strategy and success of a product. A project manager ensures successful delivery; a product manager ensures ongoing value.",
   },
   {
-    q: "Do I need a product manager for a small business or startup?",
-    a: "Yes. Even small businesses benefit from product management because it ensures features are prioritized effectively, development stays aligned with customer needs, and limited resources are used strategically.",
+    q: "Do small businesses or startups need project management?",
+    a: "Yes. Even small businesses benefit from structured project management, as it improves efficiency, keeps budgets under control, and ensures every task aligns with business objectives.",
   },
   {
-    q: "What industries benefit most from product management services?",
-    a: "Product management is valuable across all industries — from technology, construction, and real estate to finance and manufacturing — helping teams deliver impactful products efficiently.",
+    q: "What industries benefit most from project management services?",
+    a: "Virtually all industries benefit — from construction, finance, and healthcare to education and agriculture — as project management ensures organized execution, accountability, and results.",
   },
   {
-    q: "How do product managers measure success?",
-    a: "They measure success using KPIs such as customer satisfaction, feature adoption, time-to-market, and business ROI. Continuous feedback loops ensure goals remain aligned with market needs.",
+    q: "How do project managers measure success?",
+    a: "They use key performance indicators (KPIs) such as delivery time, cost control, stakeholder satisfaction, and achieved objectives. A successful project meets quality standards and delivers measurable impact.",
   },
   {
-    q: "Can Berkshire help manage existing products?",
-    a: "Absolutely. We assess current performance, analyze customer data, and develop strategies to optimize existing products for better results and market competitiveness.",
+    q: "Can Berkshire help manage existing or ongoing projects?",
+    a: "Absolutely. We provide project recovery, performance audits, and re-alignment strategies to bring existing or delayed projects back on track efficiently and sustainably.",
   },
 ];
+
+
 export const projectPhases = [
   {
     id: 1,
     icon: "🏗️",
     title: "Construction Project Management",
     description: [
-      "End-to-end planning, budgeting and scheduling for building projects",
-      "Contractor and vendor coordination, procurement and quality assurance",
-      "Permit management, site supervision and HSE compliance",
-      "Risk management and milestone tracking to ensure timely handover",
+      "Comprehensive planning, budgeting, and scheduling for construction projects.",
+      "Vendor supervision, material procurement, and site quality assurance.",
+      "Regulatory compliance and risk management oversight.",
+      "Progress tracking and timely project handover.",
     ],
     example:
-      "Managing residential, commercial or infrastructure builds — ensuring budget discipline, contractor performance, and on-time delivery.",
+      "Managing residential or commercial building projects from design to delivery with safety, quality, and cost efficiency.",
   },
   {
     id: 2,
     icon: "💻",
-    title: "IT & Software Project Management",
+    title: "IT & Digital Transformation Project Management",
     description: [
-      "Product roadmaps, sprint planning and Agile delivery oversight",
-      "Stakeholder requirements, technical scope definition and QA",
-      "System integrations, cloud migration and security compliance",
-      "Release planning, user onboarding and performance monitoring",
+      "Technology implementation planning and cross-team coordination.",
+      "System integration, software deployment, and cloud migration management.",
+      "Budget and schedule control through agile methodologies.",
+      "Testing, rollout, and performance tracking post-launch.",
     ],
     example:
-      "Coordinating cross-functional teams to deliver web and mobile products that meet business objectives and user needs.",
+      "Overseeing a company’s digital infrastructure upgrade or enterprise system rollout from start to finish.",
   },
   {
     id: 3,
     icon: "🎯",
     title: "Event & Marketing Project Management",
     description: [
-      "Campaign strategy, creative coordination and channel planning",
-      "Logistics, vendor sourcing and on-site event execution",
-      "Budget management and ROI tracking across channels",
-      "Stakeholder communications and post-event performance analysis",
+      "Campaign planning, vendor coordination, and logistics supervision.",
+      "Creative design, scheduling, and brand consistency assurance.",
+      "Budget management and ROI analysis across multiple events.",
+      "Post-event evaluation and performance reporting.",
     ],
     example:
-      "Delivering high-impact product launches, conferences and brand experiences with tight logistics and measurable outcomes.",
+      "Delivering corporate conferences, brand activations, or national events with precision and measurable success.",
   },
   {
     id: 4,
     icon: "🌍",
-    title: "N.G.O Project Management",
+    title: "N.G.O & Development Project Management",
     description: [
-      "Donor reporting, compliance and transparent fund management",
-      "Program design, beneficiary engagement and needs assessment",
-      "Monitoring & evaluation (M&E) and impact measurement",
-      "Capacity building, local partner coordination and sustainability planning",
+      "Donor reporting, budgeting, and compliance management.",
+      "Program design, community engagement, and impact measurement.",
+      "Monitoring and evaluation (M&E) for transparency and accountability.",
+      "Capacity building and sustainability planning for long-term success.",
     ],
     example:
-      "Managing community development, health or education programs to ensure effective use of funds and measurable social impact.",
+      "Managing humanitarian, educational, or healthcare projects to ensure resources are used effectively and goals are met.",
+  },
+];
+const projectServices = [
+  {
+    id: 1,
+    name: 'Construction Project Management',
+    description:
+      'Comprehensive oversight of construction projects — from planning and budgeting to supervision and final handover. Ensuring timely delivery, quality control, and adherence to safety standards.',
+    image: '/construction.jpg',
+  },
+  {
+    id: 2,
+    name: 'IT & Software Project Management',
+    description:
+      'Coordinating agile software development, system integration, and technology rollouts. Managing cross-functional teams to deliver innovative digital solutions efficiently.',
+    image: '/it-software.jpg',
+  },
+  {
+    id: 3,
+    name: 'Event & Marketing Project Management',
+    description:
+      'Planning and executing impactful events, campaigns, and activations. Handling logistics, creative direction, and ROI tracking for seamless event experiences.',
+    image: '/event-marketing.jpg',
+  },
+  {
+    id: 4,
+    name: 'N.G.O Project Management',
+    description:
+      'Overseeing social impact projects in education, healthcare, and community development. Ensuring transparent fund management and measurable, sustainable outcomes.',
+    image: '/ngo.jpg',
+  },
+  {
+    id: 5,
+    name: 'Real Estate Project Management',
+    description:
+      'Managing residential, commercial, and mixed-use developments. Coordinating feasibility studies, design reviews, budgeting, and contractor performance.',
+    image: '/real-estate.jpg',
+  },
+  {
+    id: 6,
+    name: 'Energy & Engineering Project Management',
+    description:
+      'Delivering renewable energy, oil & gas, and infrastructure projects with strong focus on safety, compliance, and sustainability performance.',
+    image: '/energy-engineering.jpg',
+  },
+  {
+    id: 7,
+    name: 'Healthcare Project Management',
+    description:
+      'Managing hospital setups, telemedicine systems, and medical facility expansions. Ensuring compliance, patient safety, and operational excellence.',
+    image: '/healthcare.jpg',
+  },
+  {
+    id: 8,
+    name: 'Educational & Training Project Management',
+    description:
+      'Executing academic infrastructure, e-learning programs, and capacity-building initiatives. Monitoring progress and ensuring educational impact.',
+    image: '/education.jpg',
+  },
+  {
+    id: 9,
+    name: 'Transportation & Logistics Project Management',
+    description:
+      'Planning and managing logistics systems, transport networks, and fleet optimization projects for improved mobility and efficiency.',
+    image: '/transport-logistics.jpg',
+  },
+  {
+    id: 10,
+    name: 'Agricultural & Environmental Project Management',
+    description:
+      'Implementing sustainable agriculture, irrigation, and environmental conservation programs. Coordinating with local communities for long-term results.',
+    image: '/agriculture.jpg',
   },
 ];
 
-export {
- serviceSteps, servicesList, faqItems
-};
+
+export { serviceSteps, projectServices, faqItems };

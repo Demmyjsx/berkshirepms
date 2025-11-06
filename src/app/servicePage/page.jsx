@@ -1,10 +1,16 @@
 import React from 'react'
-import ServicesGrid from '../Components/services'
+import ServicesHeader from '../Components/ServicesHeader'
+import ServiceCards from '../Components/ServiceCards'
+import ServiceComparison from '../Components/ServicesComparison'
+import Footer from '../Components/Footer'
 
 export default function page() {
   return (
     <>
-      <ServicesGrid />
+      <ServicesHeader />
+      <ServiceCards />  
+      <ServiceComparison />
+      <Footer />
     </>
   )
 }
