@@ -1,136 +1,89 @@
 'use client';
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react'
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
-  const faqItems = [
-    {
-      q: "What does a product management service actually do?",
-      a: "Product management services help businesses plan, develop, and launch products effectively. This includes market research, defining requirements, coordinating between teams, and ensuring the product meets customer and business goals.",
-    },
-    {
-      q: "How does product management differ from project management?",
-      a: "Product management focuses on the strategy, vision, and lifecycle of a product, while project management handles the execution and delivery of specific projects that support that strategy.",
-    },
-    {
-      q: "Do I need a product manager for a small business or startup?",
-      a: "Yes. Even small businesses benefit from product management because it ensures features are prioritized effectively, development stays aligned with customer needs, and limited resources are used strategically.",
-    },
-    {
-      q: "What industries benefit most from product management services?",
-      a: "Product management is valuable across all industries — from technology, construction, and real estate to finance and manufacturing — helping teams deliver impactful products efficiently.",
-    },
-    {
-      q: "How do product managers measure success?",
-      a: "They measure success using KPIs such as customer satisfaction, feature adoption, time-to-market, and business ROI. Continuous feedback loops ensure goals remain aligned with market needs.",
-    },
-    {
-      q: "Can Berkshire help manage existing products?",
-      a: "Absolutely. We assess current performance, analyze customer data, and develop strategies to optimize existing products for better results and market competitiveness.",
-    },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <footer className="bg-linear-to-r from-blue-100 via-green-100 to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-8">
-
-        {/* Top Section */}
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="#"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
-          >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-white">
-              Berkshire
-            </span>
-          </a>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 dark:text-gray-400 sm:mb-0">
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">About</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">Services</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <hr className="my-6 border-gray-300 dark:border-gray-700 sm:mx-auto lg:my-8" />
-
-        {/* FAQ Section */}
-        <div className="text-gray-800 dark:text-gray-300 p-8">
-          <div className="max-w-5xl mx-auto p-4 py-8 mt-12">
-            <h4 className="text-4xl font-bold text-gray-900 dark:text-white tracking-widest uppercase text-center">
-              FAQ
-            </h4>
-            <p className="text-center text-gray-600 dark:text-gray-400 text-sm mt-2">
-              Common questions about our product management services
-            </p>
-
-            <div className="space-y-6 mt-12">
-              {faqItems.map((item, index) => {
-                const isActive = activeIndex === index;
-                return (
-                  <div
-                    key={index}
-                    onClick={() => toggleFAQ(index)}
-                    className="border-b border-gray-400/50 pb-4 cursor-pointer transition-colors duration-300 hover:bg-white/10 rounded-lg px-3"
-                  >
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        {item.q}
-                      </h3>
-                      <motion.span
-                        initial={false}
-                        animate={{ rotate: isActive ? 45 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-gray-700 dark:text-gray-400 text-2xl font-bold select-none"
-                      >
-                        +
-                      </motion.span>
-                    </div>
-
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.div
-                          key="content"
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3, ease: "easeOut" }}
-                        >
-                          <p className="text-gray-700 dark:text-gray-400 mt-3 leading-relaxed">
-                            {item.a}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
-            </div>
+    <motion.footer
+      className="w-full bg-[#1A237E] py-10 mt-10"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', duration: 0.9 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 px-4">
+        <div className="flex flex-col gap-3">
+          <div className="font-extrabold text-white text-lg">Berkshire PMS LLC</div>
+          <div className="text-gray-400 text-xs">&copy; 2024 Berkshire PMS LLC. All rights reserved.</div>
+          <div className="flex gap-3 mt-2">
+            <motion.a
+              href="#"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2, backgroundColor: "#FF8400" }}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#1A237E] hover:bg-[#FF8400] text-white transition"
+            >
+              <FaLinkedin />
+            </motion.a>
+            <motion.a
+              href="#"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2, backgroundColor: "#FF8400" }}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#1A237E] hover:bg-[#FF8400] text-white transition"
+            >
+              <FaTwitter />
+            </motion.a>
           </div>
         </div>
-
-        {/* Bottom Footer */}
-        <span className="block text-sm text-gray-700 sm:text-center dark:text-gray-400 mt-8">
-          © 2025{" "}
-          <a href="#" className="hover:underline">
-            Berkshire™
-          </a>. All Rights Reserved.
-        </span>
+        <div className="flex flex-wrap gap-10">
+          <div>
+            <div className="font-bold text-white mb-3">COMPANY</div>
+            <ul>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">About Us</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Careers</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Press</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="font-bold text-white mb-3">SERVICES</div>
+            <ul>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Planning</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Collaboration</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Analytics</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="font-bold text-white mb-3">LEGAL</div>
+            <ul>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Privacy Policy</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-gray-300 hover:text-[#FF8400] transition">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </footer>
-  );
+    </motion.footer>
+  )
 }

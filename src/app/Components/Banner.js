@@ -13,7 +13,7 @@ export default function Banner() {
   return (
     <div className="hero my-15 text-center bg-base-200">
       <div className="hero-content text-center max-w-5xl mx-auto px-4">
-        {/* Animated Heading */}
+        
         <motion.h1
           className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-bold my-5`}
           initial={{ y: 50, opacity: 0 }}
@@ -24,7 +24,7 @@ export default function Banner() {
           Why Choose Us
         </motion.h1>
 
-        {/* Animated Paragraph */}
+    
         <motion.p
           className={`mb-2 text-xl sm:text-2xl lg:text-3xl tracking-tight text-gray-900 dark:text-gray-700`}
           initial={{ y: 80, opacity: 0 }}

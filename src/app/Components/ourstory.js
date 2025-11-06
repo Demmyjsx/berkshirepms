@@ -14,7 +14,7 @@ export default function OurStory() {
   return (
     <section
       id="our-story"
-      className="relative lg:mt-5 overflow-hidden py-24 px-6 sm:px-12 lg:px-20 bg-linear-to-r from-blue-100 via-green-100 to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500 ">
+      className="relative lg:mt-5 overflow-hidden py-24 px-6 sm:px-12 lg:px-20 bg-linear-to-r from-orange-300 via-amber-500 to-orange-300 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500 ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 ">
         {/* ===== Text Section ===== */}
         <motion.div

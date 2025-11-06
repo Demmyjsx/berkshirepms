@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -17,11 +18,19 @@ const links = [
 
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
+    <nav className="bg-transparent border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-amber-700 dark:text-white">
-            Berkshire <sub className='text-sm'>pms</sub>
+          <span className="flex self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">
+             <Image
+      src="/Logo.png"
+      alt="Berkshire PMS Logo"
+      width={50}
+      height={50}
+      className="object-contain"
+      priority
+    />
+           <sub className='text-sm'>pms</sub>
           </span>
         </Link>
 
@@ -49,15 +58,15 @@ const links = [
         </button>
 
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={`block py-2 px-3 rounded-sm md:p-0 ${
                     pathname === link.href
-                      ? 'text-blue-700 dark:text-blue-500'
-                      : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700'
+                      ? 'text-blue-200 dark:text-blue-500'
+                      : 'text-gray-200 hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700'
                   }`}
                 >
                   {link.label}

@@ -1,84 +1,36 @@
 'use client';
-
-import { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
-export default function Newsletter() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setTimeout(() => {
-      setStatus('success');
-      setEmail('');
-    }, 1000);
-  };
-
+export default function NewsletterSignup() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      viewport={{ once: true, amount: 0.3 }}
-      className="bg-linear-to-r from-blue-100 via-green-100 to-blue-200 rounded-2xl p-8 text-center flex flex-col items-center justify-center shadow-lg"
+    <motion.section 
+      className="flex flex-col items-center py-12"
+      initial={{ opacity: 0, scale: 0.85 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ type: 'spring', bounce: 0.52, duration: 0.8 }}
+      viewport={{ once: true }}
     >
-      <motion.h2
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl font-semibold mb-3 text-gray-800"
-      >
-        Get more updates...
-      </motion.h2>
-
-      <p className="text-gray-600 text-sm max-w-md mb-6 font-bold">
-       
-        Sign up for our newsletter and be among the first to find out about
-        new updates, features, and exclusive offers.
-      </p>
-
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md"
-      >
-        <input
-          type="email"
-          placeholder="Your email address..."
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="input input-bordered w-full sm:w-auto flex-1 px-4 py-2 rounded-lg border focus:ring focus:ring-green-300"
-        />
-        <button
-          type="submit"
-          disabled={!email}
-          className="btn bg-black hover:bg-black px-4 rounded-sm text-white w-full sm:w-auto"
-        >
-          Subscribe
-        </button>
-      </form>
-
-      {status === 'success' && (
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-green-700 text-sm mt-4"
-        >
-          🎉 Subscription successful! Thank you for joining.
-        </motion.p>
-      )}
-
-      <p className="text-xs text-gray-500 mt-6 max-w-md">
-        By subscribing, you agree with our{' '}
-        <a href="#" className="text-green-600 hover:underline">
-          Terms of Service
-        </a>{' '}
-        and{' '}
-        <a href="#" className="text-green-600 hover:underline">
-          Privacy Policy
-        </a>.
-      </p>
-    </motion.div>
+      <div className="bg-[#E3F2FD] rounded-xl shadow-md px-8 py-10 w-full max-w-2xl flex flex-col items-center">
+        <h3 className="text-2xl font-bold text-[#1A237E] mb-2">Stay Updated!</h3>
+        <p className="text-gray-600 mb-6 text-center">
+          Join our newsletter to get the latest news, tips, and updates from Berkshire PMS.
+        </p>
+        <form className="w-full flex flex-col sm:flex-row gap-3" onSubmit={e => e.preventDefault()}>
+          <input
+            type="email"
+            required
+            className="flex-1 rounded-md border border-[#ECECEC] p-3 bg-white focus:outline-none focus:ring-2 focus:ring-[#FF8400]"
+            placeholder="Enter your email address"
+          />
+          <button
+            type="submit"
+            className="bg-[#FF8400] hover:bg-orange-600 transition-colors rounded-md px-6 py-3 font-semibold text-white"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </motion.section>
   );
 }

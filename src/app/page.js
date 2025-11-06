@@ -1,8 +1,9 @@
 import Banner from "./Components/Banner";
-import Footer from "./Components/Footer";
 import Grid from "./Components/Grid";
-import Jumbo from "./Components/Jumbo";
-import Newsletter from "./Components/Newsletter";
+import NewsletterSignup from "./Components/Newsletter";
+import FaqSection from "./Components/faq";
+import Jumbo from "./Components/featureCard";
+import Footer from "./Components/Footer";
 
 export default function HomePage() {
   return (
@@ -10,8 +11,11 @@ export default function HomePage() {
     <Jumbo />
     <Grid />
     <Banner />
-    <Newsletter />
+    <NewsletterSignup />
+ <FaqSection />
     <Footer />
+  
+
    </>
   );
 }
