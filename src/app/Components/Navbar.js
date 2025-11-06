@@ -18,7 +18,7 @@ const links = [
 
 
   return (
-    <nav className="bg-transparent border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
+    <nav className="bg-orange-400 border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="flex self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">
