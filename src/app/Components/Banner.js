@@ -65,7 +65,7 @@ export default function Banner() {
 
               <div className="mt-auto">
                 <Link
-                  href="/services"
+                  href="/servicePage"
                   className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
                 >
                   Learn more about {phase.title.split(" ")[0]}
@@ -92,7 +92,7 @@ export default function Banner() {
           className="text-center mt-10"
         >
           <Link
-            href="/services"
+            href="/servicePage"
             className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition"
           >
             See More Services
