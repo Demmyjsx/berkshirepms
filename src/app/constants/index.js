@@ -133,7 +133,7 @@ const projectServices = [
     name: 'IT & Software Project Management',
     description:
       'Coordinating agile software development, system integration, and technology rollouts. Managing cross-functional teams to deliver innovative digital solutions efficiently.',
-    image: '/it-software.jpg',
+    image: '/.jpg',
   },
   {
     id: 3,
@@ -168,7 +168,7 @@ const projectServices = [
     name: 'Healthcare Project Management',
     description:
       'Managing hospital setups, telemedicine systems, and medical facility expansions. Ensuring compliance, patient safety, and operational excellence.',
-    image: '/healthcare.jpg',
+    image: '/health.jpg',
   },
   {
     id: 8,
@@ -182,7 +182,7 @@ const projectServices = [
     name: 'Transportation & Logistics Project Management',
     description:
       'Planning and managing logistics systems, transport networks, and fleet optimization projects for improved mobility and efficiency.',
-    image: '/transport-logistics.jpg',
+    image: '/Transportation.jpg',
   },
   {
     id: 10,
