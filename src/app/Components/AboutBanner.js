@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Replace these paths with your banner/service images
+// Replace with your actual images
 const serviceCarouselImages = [
   '/transportation.jpg',
-  '/realestae.jpg',
+  '/realestate.jpg',
   '/health.jpg',
 ];
 
@@ -20,11 +20,9 @@ export default function ServicesHeader() {
     return () => clearInterval(interval);
   }, []);
 
-  
-
   return (
     <section className="relative py-20 w-full text-center overflow-hidden min-h-[450px] flex flex-col justify-center items-center">
-  
+      {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence>
           {serviceCarouselImages.map((img, idx) =>
@@ -32,38 +30,38 @@ export default function ServicesHeader() {
               <motion.div
                 key={img}
                 initial={{ opacity: 0, scale: 1.08 }}
-                animate={{ opacity: 0.75, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.08 }}
-                transition={{ duration: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.05 }}
+                transition={{ duration: 0.8 }}
                 className="absolute inset-0 w-full h-full"
                 style={{
                   backgroundImage: `url(${img})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
-                
-                  filter: ''
+                  filter: 'brightness(0.85) contrast(1.1) saturate(1.1)', // 🌟 makes image vivid and clear
                 }}
               />
             ) : null
           )}
         </AnimatePresence>
 
-        <div className="absolute inset-0" />
+        {/* Optional dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
-   
+      {/* Text Content */}
       <motion.div
-        className="relative z-10 max-w-3xl mx-auto"
+        className="relative z-10 max-w-3xl mx-auto text-white px-4"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, type: 'spring' }}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-md">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-orange-400 mb-4 drop-shadow-lg">
           Our Services
         </h1>
         <motion.p
-          className="max-w-xl text-lg text-[#E3F2FD] mx-auto"
+          className="max-w-xl text-lg font-semibold text-whie-300 mx-auto drop-shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.7, type: 'spring' }}
@@ -72,15 +70,16 @@ export default function ServicesHeader() {
         </motion.p>
       </motion.div>
 
-      {/* Carousel indicators */}
+      {/* Indicators */}
       <div className="relative z-10 flex gap-2 mt-8 justify-center">
         {serviceCarouselImages.map((_, idx) => (
           <button
             key={idx}
-            className={`w-3 h-3 rounded-full transition-all ${current === idx ? 'bg-[#FF8400]' : 'bg-white/60'}`}
-            aria-label={`Go to slide ${idx + 1}`}
             onClick={() => setCurrent(idx)}
-            style={{ outline: 'none', border: 'none' }}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              current === idx ? 'bg-orange-400 scale-110' : 'bg-white/60 hover:bg-white/80'
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>
