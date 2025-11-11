@@ -21,7 +21,7 @@ export default function ServicesHeader() {
   }, []);
 
   return (
-    <section className="relative py-20 w-full text-center overflow-hidden min-h-[450px] flex flex-col justify-center items-center">
+    <section className="relative py-20 w-full text-center overflow-hidden min-h-[700px] flex flex-col justify-center items-center">
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence>

@@ -3,7 +3,7 @@ import React from "react";
 import AboutBanner from "../Components/AboutBanner";
 import AboutTimeline from "../Components/AboutTimeline";
 import AboutMissionVisionValues from "../Components/AboutMissionVisionValues";
-import AboutTeam from "../Components/AboutTeam";
+// import AboutTeam from "../Components/AboutTeam";
 import AboutDiversityCommunity from "../Components/AboutDiversityCommunity";
 import AboutCareersCta from "../Components/AboutCareersCta";
 import Footer from "../Components/Footer";
@@ -14,7 +14,7 @@ export default function About() {
       <AboutBanner />
       <AboutTimeline />
       <AboutMissionVisionValues />
-      <AboutTeam />
+      {/* <AboutTeam /> */}
       <AboutDiversityCommunity />
       <AboutCareersCta />
       <Footer />
