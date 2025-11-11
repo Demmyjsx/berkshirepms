@@ -136,21 +136,21 @@ const projectServices = [
     name: 'Construction Project Management',
     description:
       'Comprehensive oversight of construction projects — from planning and budgeting to supervision and final handover. Ensuring timely delivery, quality control, and adherence to safety standards.',
-    image: '/construction.jpg',
+    image: '/architect.jpg',
   },
   {
     id: 2,
     name: 'IT & Software Project Management',
     description:
       'Coordinating agile software development, system integration, and technology rollouts. Managing cross-functional teams to deliver innovative digital solutions efficiently.',
-    image: '/.jpg',
+    image: '/software.jpg',
   },
   {
     id: 3,
     name: 'Event & Marketing Project Management',
     description:
       'Planning and executing impactful events, campaigns, and activations. Handling logistics, creative direction, and ROI tracking for seamless event experiences.',
-    image: '/event-marketing.jpg',
+    image: '/.jpg',
   },
   {
     id: 4,

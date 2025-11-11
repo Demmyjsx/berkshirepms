@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Replace with your actual images
 const serviceCarouselImages = [
-  '/transportation.jpg',
+  '/estate-dubai.jpg',
   '/realestate.jpg',
   '/health.jpg',
 ];
@@ -61,11 +61,11 @@ export default function ServicesHeader() {
           Our Services
         </h1>
         <motion.p
-          className="max-w-xl text-3xl font-semibold text-white mx-auto drop-shadow-md"
+          className="max-w-xl text-4xl font-semibold text-white mx-auto drop-shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.7, type: 'spring' }}
-        >
+         >
           Discover how Berkshire PMS can transform your project management with a full spectrum of services.
         </motion.p>
       </motion.div>
