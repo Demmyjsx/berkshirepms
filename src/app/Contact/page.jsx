@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactHeader from '../Components/contactHeader'
+import ContactHeader from '../Components/ContactHeader'
 
 import Footer from '../Components/Footer'
 
