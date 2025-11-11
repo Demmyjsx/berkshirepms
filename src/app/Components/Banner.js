@@ -13,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function Banner() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-[#1A237E] py-16">
       <div className="max-w-7xl mx-auto px-6">
         <motion.header
           initial={{ opacity: 0, y: 24 }}
@@ -23,11 +23,11 @@ export default function Banner() {
           className="text-center mb-10"
         >
           <h2
-            className={`${spaceGrotesk.className} text-4xl sm:text-5xl font-extrabold tracking-tight`}
+            className={`${spaceGrotesk.className} text-white text-4xl sm:text-5xl font-extrabold tracking-tight`}
           >
             Our Core Project Expertise
           </h2>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-gray-200 max-w-2xl mx-auto">
             We deliver disciplined project leadership across construction, technology,
             marketing and social impact initiatives — ensuring accountability, compliance,
             and measurable results.

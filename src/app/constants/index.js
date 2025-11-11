@@ -33,7 +33,7 @@ const serviceSteps = [
     name: "Monitoring & Closure",
     description:
       "Track performance, manage changes, evaluate outcomes, and ensure successful handover with full documentation.",
-    image: "/monitoring.jpg",
+    image: "/Monitoring.jpg",
   },
 ];
 
