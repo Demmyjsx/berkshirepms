@@ -22,7 +22,7 @@ export default function ServicesHeader() {
 
   return (
     <section className="relative py-20 w-full text-center overflow-hidden min-h-[700px] flex flex-col justify-center items-center">
-      {/* Background Carousel */}
+     
       <div className="absolute inset-0 z-0">
         <AnimatePresence>
           {serviceCarouselImages.map((img, idx) =>
@@ -39,15 +39,15 @@ export default function ServicesHeader() {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
-                  filter: 'brightness(0.85) contrast(1.1) saturate(1.1)', // 🌟 makes image vivid and clear
+                  filter: 'brightness(0.95) contrast(1.1) saturate(1.3)', 
                 }}
               />
             ) : null
           )}
         </AnimatePresence>
 
-        {/* Optional dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/20" />
+       
+        
       </div>
 
       {/* Text Content */}
@@ -57,11 +57,11 @@ export default function ServicesHeader() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, type: 'spring' }}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-orange-400 mb-4 drop-shadow-lg">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-orange-400 mb-4 drop-shadow-lg">
           Our Services
         </h1>
         <motion.p
-          className="max-w-xl text-lg font-semibold text-whie-300 mx-auto drop-shadow-md"
+          className="max-w-xl text-3xl font-semibold text-white mx-auto drop-shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.7, type: 'spring' }}

@@ -58,15 +58,15 @@ const links = [
         </button>
 
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-200 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={`block py-2 px-3 rounded-sm md:p-0 ${
                     pathname === link.href
-                      ? 'text-blue-200 dark:text-blue-500'
-                      : 'text-gray-200 hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700'
+                      ? 'text-blue-800 dark:text-blue-500'
+                      : 'text-black hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700'
                   }`}
                 >
                   {link.label}

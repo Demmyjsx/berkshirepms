@@ -15,15 +15,17 @@ export default function AboutBerkshire() {
   return (
     <section className="bg-gradient-to-r from-[#0D47A1] to-[#1976D2] text-white py-20 px-6 md:px-20">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ staggerChildren: 0.3 }}
         className="max-w-6xl mx-auto"
       >
         <motion.h2
-          initial={{ y: -50, scale: 0.8 }}
-          animate={{ y: 0, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 90, damping: 15, delay: 0.2 }}
+          variants={{
+            hidden: { opacity: 0, y: -50, scale: 0.8 },
+            visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 90, damping: 15 } }
+          }}
           className="text-4xl md:text-5xl font-bold mb-10 text-center"
         >
           About Berkshire PMS LLC
@@ -32,10 +34,10 @@ export default function AboutBerkshire() {
         {content.map((para, idx) => (
           <motion.p
             key={idx}
-            initial={{ opacity: 0, x: idx % 2 === 0 ? -100 : 100, rotate: idx % 2 === 0 ? -2 : 2 }}
-            whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: idx * 0.2, type: 'spring', stiffness: 70 }}
+            variants={{
+              hidden: { opacity: 0, x: idx % 2 === 0 ? -100 : 100, rotate: idx % 2 === 0 ? -2 : 2 },
+              visible: { opacity: 1, x: 0, rotate: 0, transition: { type: 'spring', stiffness: 70 } }
+            }}
             className="mb-6 text-lg md:text-xl leading-relaxed"
           >
             {para}
@@ -43,10 +45,10 @@ export default function AboutBerkshire() {
         ))}
 
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 1.5, type: 'spring', stiffness: 80 }}
+          variants={{
+            hidden: { scale: 0.8, opacity: 0 },
+            visible: { scale: 1, opacity: 1, transition: { type: 'spring', stiffness: 80, delay: 0.5 } }
+          }}
           className="mt-10 text-center"
         >
           <span className="text-2xl md:text-3xl font-semibold tracking-wide text-yellow-400">

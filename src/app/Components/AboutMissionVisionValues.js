@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUsers, FaLightbulb, FaHandshake, FaGlobeAfrica } from 'react-icons/fa';
+
 import { mission, vision, values,} from '../constants';
 
 export default function AboutTimeline() {
