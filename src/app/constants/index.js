@@ -37,6 +37,16 @@ const serviceSteps = [
   },
 ];
 
+const mission = "Empower organizations to achieve projects with clarity and confidence—driving collaboration, innovation, and outstanding results for every initiative.";
+const vision = "To be recognized globally as the leading provider of project management solutions, celebrated for creativity, reliability, and client-focused excellence.";
+const values = [
+  { label: 'Safety & Integrity', desc: 'We operate responsibly and ethically, prioritizing safety, security, and the highest standards in everything we do.' },
+  { label: 'Collaborative Success', desc: 'We bring together the best expertise worldwide to solve challenges and achieve shared goals.' },
+  { label: 'Innovation with Purpose', desc: 'We embrace fresh ideas and forward-thinking approaches that deliver real value to clients, communities, and our teams.' },
+  { label: 'Excellence in Delivery', desc: 'We focus relentlessly on client satisfaction through superior project execution and operational expertise.' },
+  { label: 'Sustainable Impact', desc: 'We act to positively influence the environment, enrich communities, and leave lasting legacies for future generations.' },
+  { label: 'Growth Together', desc: 'We foster a welcoming, engaging workplace that helps every team member reach their full potential.' },
+];
 
 const faqItems = [
   {
@@ -194,4 +204,4 @@ const projectServices = [
 ];
 
 
-export { serviceSteps, projectServices, faqItems };
+export { mission, vision, values, serviceSteps, projectServices, faqItems };
