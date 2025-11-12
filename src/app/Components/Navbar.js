@@ -63,7 +63,7 @@ const links = [
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`block py-2 px-3 rounded-sm md:p-0 ${
+                  className={`block font-bold py-2 px-3 rounded-sm md:p-0 ${
                     pathname === link.href
                       ? 'text-blue-800 dark:text-blue-500'
                       : 'text-black hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700'

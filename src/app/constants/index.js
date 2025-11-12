@@ -150,7 +150,7 @@ const projectServices = [
     name: 'Event & Marketing Project Management',
     description:
       'Planning and executing impactful events, campaigns, and activations. Handling logistics, creative direction, and ROI tracking for seamless event experiences.',
-    image: '/.jpg',
+    image: '/event.jpg',
   },
   {
     id: 4,
@@ -164,14 +164,14 @@ const projectServices = [
     name: 'Real Estate Project Management',
     description:
       'Managing residential, commercial, and mixed-use developments. Coordinating feasibility studies, design reviews, budgeting, and contractor performance.',
-    image: '/real-estate.jpg',
+    image: '/Realestatecity.jpg',
   },
   {
     id: 6,
     name: 'Energy & Engineering Project Management',
     description:
       'Delivering renewable energy, oil & gas, and infrastructure projects with strong focus on safety, compliance, and sustainability performance.',
-    image: '/energy-engineering.jpg',
+    image: '/Engineer.jpg',
   },
   {
     id: 7,
